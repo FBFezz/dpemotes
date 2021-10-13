@@ -27,10 +27,14 @@ function WalkCommandStart(source, args, raw)
       ResetPedMovementClipset(PlayerPedId()) return
   end
 
-  local name2 = table.unpack(DP.Walks[name])
-  if name2 ~= nil then
+  if tableHasKey(DP.Walks,name) then
+    local name2 = table.unpack(DP.Walks[name])
     WalkMenuStart(name2)
   else
     EmoteChatMessage("'"..name.."' is not a valid walk")
   end
+end
+
+function tableHasKey(table, key)
+  return table[key] ~= nil
 end
