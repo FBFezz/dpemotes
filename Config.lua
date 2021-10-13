@@ -91,6 +91,7 @@ Config.Languages = {
         ['makeitrain'] = "Press ~y~G~w~ to make it rain.",
         ['pee'] = "Hold ~y~G~w~ to pee.",
         ['spraychamp'] = "Hold ~y~G~w~ to spray champagne",
+	['stun'] = "Press ~y~G~w~ to 'use' stun gun.",
 	['spray'] = "Hold ~y~CAPSLOCK~w~ to spray",
         ['bound'] = "Bound ",
         ['to'] = "to",
