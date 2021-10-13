@@ -20,7 +20,7 @@ local PtfxNoProp = false
 Citizen.CreateThread(function()
   while true do
 
-    if (IsPedShooting(PlayerPedId()) and IsInAnimation) or (isLoggedIn and PlayerData.metadata['isdead'] and IsInAnimation) then
+    if IsPedShooting(PlayerPedId()) and IsInAnimation then
       EmoteCancel()
     end
 
@@ -73,7 +73,7 @@ RegisterCommand('walks', function(source, args, raw) WalksOnCommand() end)
 AddEventHandler('onResourceStop', function(resource)
   if resource == GetCurrentResourceName() then
     DestroyAllProps()
-    ClearPedTasksImmediately(GetPlayerPed(-1))
+    ClearPedTasksImmediately(PlayerPedId())
     ResetPedMovementClipset(PlayerPedId())
   end
 end)
@@ -106,7 +106,7 @@ function EmoteCancel()
 
   if IsInAnimation then
     PtfxStop()
-    ClearPedTasks(GetPlayerPed(-1))
+    ClearPedTasks(PlayerPedId())
     DestroyAllProps()
     IsInAnimation = false
   end
@@ -299,13 +299,13 @@ function OnEmotePlay(EmoteName)
     return
   end
 
-  if not DoesEntityExist(GetPlayerPed(-1)) then
+  if not DoesEntityExist(PlayerPedId()) then
     return false
   end
 
   if Config.DisarmPlayer then
-    if IsPedArmed(GetPlayerPed(-1), 7) then
-      SetCurrentPedWeapon(GetPlayerPed(-1), GetHashKey('WEAPON_UNARMED'), true)
+    if IsPedArmed(PlayerPedId(), 7) then
+      SetCurrentPedWeapon(PlayerPedId(), GetHashKey('WEAPON_UNARMED'), true)
     end
   end
 
@@ -325,8 +325,8 @@ function OnEmotePlay(EmoteName)
     CheckGender()
     if ChosenDict == "MaleScenario" then if InVehicle then return end
       if PlayerGender == "male" then
-        ClearPedTasks(GetPlayerPed(-1))
-        TaskStartScenarioInPlace(GetPlayerPed(-1), ChosenAnimation, 0, true)
+        ClearPedTasks(PlayerPedId())
+        TaskStartScenarioInPlace(PlayerPedId(), ChosenAnimation, 0, true)
         DebugPrint("Playing scenario = ("..ChosenAnimation..")")
         IsInAnimation = true
       else
@@ -334,14 +334,14 @@ function OnEmotePlay(EmoteName)
       end return
     elseif ChosenDict == "ScenarioObject" then if InVehicle then return end
       BehindPlayer = GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 0 - 0.5, -0.5);
-      ClearPedTasks(GetPlayerPed(-1))
-      TaskStartScenarioAtPosition(GetPlayerPed(-1), ChosenAnimation, BehindPlayer['x'], BehindPlayer['y'], BehindPlayer['z'], GetEntityHeading(PlayerPedId()), 0, 1, false)
+      ClearPedTasks(PlayerPedId())
+      TaskStartScenarioAtPosition(PlayerPedId(), ChosenAnimation, BehindPlayer['x'], BehindPlayer['y'], BehindPlayer['z'], GetEntityHeading(PlayerPedId()), 0, 1, false)
       DebugPrint("Playing scenario = ("..ChosenAnimation..")")
       IsInAnimation = true
       return
     elseif ChosenDict == "Scenario" then if InVehicle then return end
-      ClearPedTasks(GetPlayerPed(-1))
-      TaskStartScenarioInPlace(GetPlayerPed(-1), ChosenAnimation, 0, true)
+      ClearPedTasks(PlayerPedId())
+      TaskStartScenarioInPlace(PlayerPedId(), ChosenAnimation, 0, true)
       DebugPrint("Playing scenario = ("..ChosenAnimation..")")
       IsInAnimation = true
     return end 
@@ -401,7 +401,7 @@ function OnEmotePlay(EmoteName)
     end
   end
 
-  TaskPlayAnim(GetPlayerPed(-1), ChosenDict, ChosenAnimation, 2.0, 2.0, AnimationDuration, MovementType, 0, false, false, false)
+  TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 2.0, 2.0, AnimationDuration, MovementType, 0, false, false, false)
   RemoveAnimDict(ChosenDict)
   IsInAnimation = true
   MostRecentDict = ChosenDict
