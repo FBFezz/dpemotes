@@ -27,9 +27,6 @@ Config = {
 -- You can disable the Ragdoll keybinding here.
 	RagdollEnabled = true,
 	RagdollKeybind = 303, -- Get the button number here https://docs.fivem.net/game-references/controls/
--- You can disable the Cross Arms keybinding here.
-    	CrossArmsEnabled = true,
-    	CrossArmsKeyBind = 244,
 -- You can disable the Facial Expressions menu here.
 	ExpressionsEnabled = true,
 -- You can disable the Walking Styles menu here.
