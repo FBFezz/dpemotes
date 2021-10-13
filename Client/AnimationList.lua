@@ -2129,4 +2129,169 @@ DP.PropEmotes = {
        EmoteLoop = true,
        EmoteMoving = true,
    }},
+      ["binoculars"] = {"amb@world_human_binoculars@male@idle_b", "idle_f", "Binoculars", AnimationOptions =
+   {
+      Prop = "prop_binoc_01",
+      PropBone = 28422,
+      PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+    ["binoculars2"] = {"amb@world_human_binoculars@male@idle_a", "idle_c", "Binoculars 2", AnimationOptions =
+   {
+      Prop = "prop_binoc_01",
+      PropBone = 28422,
+      PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["tennisplay"] = {"move_weapon@jerrycan@generic", "idle", "Tennis Play", AnimationOptions =
+   {
+      Prop = "prop_tennis_bag_01",
+      PropBone = 57005,
+      PropPlacement = {0.27, 0.0, 0.0, 91.0, 0.0, -82.9999951},
+	  SecondProp = 'prop_tennis_rack_01',
+      SecondPropBone = 60309,
+      SecondPropPlacement = {0.0800, 0.0300, 0.0, -130.2907295, 3.8782324, 6.588224},
+      EmoteLoop = true,
+      EmoteMoving = true,
+
+
+   }},
+   ["weights"] = {"amb@world_human_muscle_free_weights@male@barbell@base", "base", "Weights", AnimationOptions =
+   {
+      Prop = "prop_curl_bar_01",
+      PropBone = 28422,
+      PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+      EmoteLoop = true,
+      EmoteMoving = true,
+  }},
+   ["weights2"] = {"amb@world_human_muscle_free_weights@male@barbell@idle_a", "idle_d", "Weights 2", AnimationOptions =
+   {
+      Prop = "prop_curl_bar_01",
+      PropBone = 28422,
+      PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+      EmoteLoop = true,
+      EmoteMoving = true,
+  }},
+   ["fuel"] = {"weapons@misc@jerrycan@", "fire", "fuel", AnimationOptions =
+   {
+      Prop = "w_am_jerrycan",
+      PropBone = 57005,
+      PropPlacement = {0.1800, 0.1300, -0.2400, -165.8693883, -11.2122753, -32.9453021},
+      EmoteLoop = true,
+      EmoteMoving = true,
+  }},
+   ["fuelcarry"] = {"weapons@misc@jerrycan@franklin", "idle", "Fuel Carry", AnimationOptions =
+   {
+      Prop = "w_am_jerrycan",
+      PropBone = 28422,
+      PropPlacement = {0.26, 0.050, 0.0300, 80.00, 180.000, 79.99},
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["hitchhike"] = {"random@hitch_lift", "idle_f", "Hitchhike", AnimationOptions =
+   {
+      Prop = "w_am_jerrycan",
+      PropBone = 18905,
+      PropPlacement = {0.32, -0.0100, 0.0, -162.423, 74.83, 58.79},
+	   SecondProp = 'prop_michael_backpack',
+      SecondPropBone = 40269,
+      SecondPropPlacement = {-0.07, -0.21, -0.11, -144.93, 117.358, -6.16},
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["ssign"] = {"rcmnigel1d", "base_club_shoulder", "Steal Stop Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_01a",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+  }},
+   ["ssign2"] = {"rcmnigel1d", "base_club_shoulder", "Steal Yield Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_02a",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+    }},
+   ["ssign3"] = {"rcmnigel1d", "base_club_shoulder", "Steal Hospital Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_03d",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["ssign4"] = {"rcmnigel1d", "base_club_shoulder", "Steal Parking Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_04a",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["ssign5"] = {"rcmnigel1d", "base_club_shoulder", "Steal Parking Sign 2 ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_04w",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+    }},
+   ["ssign6"] = {"rcmnigel1d", "base_club_shoulder", "Steal Pedestrian Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_05a",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+    }},
+   ["ssign7"] = {"rcmnigel1d", "base_club_shoulder", "Steal Street Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_road_05t",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["ssign8"] = {"rcmnigel1d", "base_club_shoulder", "Steal Freeway Sign ", AnimationOptions =
+   {
+      Prop = "prop_sign_freewayentrance",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["ssign9"] = {"rcmnigel1d", "base_club_shoulder", "Steal Stop Sign Snow ", AnimationOptions =
+   {
+      Prop = "prop_snow_sign_road_01a",
+      PropBone = 60309,
+      PropPlacement = {-0.1390, -0.9870, 0.4300, -67.3315314, 145.0627869, -4.4318885},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+   ["conehead"] = {"move_m@drunk@verydrunk_idles@", "fidget_07", "Cone Head ", AnimationOptions =
+   {
+      Prop = "prop_roadcone02a",
+      PropBone = 31086,
+      PropPlacement = {-0.0300, 0.0200, 0.000, 0.000, 83.9000, 0.000},
+      --
+      EmoteLoop = true,
+      EmoteMoving = true,
+   }},
+
 }
